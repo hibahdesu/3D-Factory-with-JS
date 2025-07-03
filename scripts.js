@@ -54,6 +54,7 @@ let titlesContent =
     {
         hero: 'Step Into the Future of Dining',
         about: 'About Us',
+        aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting. Guests are transported to magical worlds through animated visuals, soundscapes, and storytelling, all while enjoying world-class cuisine.',
         catalog: 'Our Catalog'
     
     }
@@ -80,11 +81,6 @@ heroRight.style.backgroundSize = 'contain';
 heroRight.style.backgroundRepeat = 'no-repeat';
 heroRight.style.backgroundPosition = 'center';
 
-// heroSection.style.alignItems = 'center';
-// heroSection.style.justifyContent = 'center';
-
-
-
 let heroTxtContent = titlesContent.hero;
 let heroTxt = document.createElement('h1');
 heroTxt.textContent = heroTxtContent;
@@ -99,15 +95,33 @@ heroSection.appendChild(heroTxt);
 heroSection.appendChild(heroRight);
 document.body.appendChild(heroSection);
 
-let main = document.createElement('main');
-main.innerHTML = `
-    <h1>Welcome to Our Website</h1>
-    <p>This is a sample website created to demonstrate basic HTML, CSS, and JavaScript integration.</p>
-    <p>Feel free to explore the navigation links above.</p>
-`;
+let aboutSection = document.createElement('div');
+aboutSection.style.height = '90vh';
+aboutSection.style.display = 'flex';
+aboutSection.style.flexDirection = 'column';
+aboutSection.style.padding = '1em 2em';
+aboutSection.style.gap = '.5em';
+aboutSection.style.justifyContent = 'center';
+aboutSection.style.alignItems = 'center';
+
+let aboutHeader = document.createElement('h3');
+aboutHeader.textContent = titlesContent.about;
+aboutHeader.style.fontFamily = headerStyles;
+aboutHeader.style.fontSize = '3em';
+aboutHeader.style.margin = '0';
+
+let aboutContents = document.createElement('p');
+aboutContents.textContent = titlesContent.aboutContent;
+aboutContents.style.width = '50%';
+aboutContents.style.lineHeight = '1.8';
+aboutContents.style.textAlign = 'center';
+aboutContents.style.fontSize = '1.2rem';
+
+aboutSection.appendChild(aboutHeader);
+aboutSection.appendChild(aboutContents);
+document.body.appendChild(aboutSection);
 
 
-document.body.appendChild(main);
 
 let container = document.createElement('div');
 container.className = 'container';
