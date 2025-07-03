@@ -176,12 +176,20 @@ catalogDiv.style.width = '100%';
 let catalogLeft = document.createElement('div');
 catalogLeft.id = 'catalogLeft';
 catalogLeft.style.background = 'red';
-catalogLeft.textContent = titlesContent.catalogContent;
 catalogLeft.style.width = '20%';
-catalogLeft.style.padding = paddings;
-catalogLeft.style.fontFamily = headerStyles;
-catalogLeft.style.fontSize = contentSize;
+catalogLeft.style.padding = '1em 1.5em';
+catalogLeft.style.borderRadius = '.5em'
 
+let catalogLeftTxt = document.createElement('p');
+catalogLeftTxt.textContent = titlesContent.catalogContent;
+catalogLeft.style.display = 'flex';
+catalogLeft.style.justifyContent = 'center';
+catalogLeft.style.alignItems = 'center';
+catalogLeftTxt.style.fontFamily = headerStyles;
+catalogLeftTxt.style.fontSize = '2rem';
+catalogLeftTxt.style.color = 'white';
+
+catalogLeft.appendChild(catalogLeftTxt);
 let catalogRight = document.createElement('div');
 catalogRight.id = 'catalogRight';
 catalogRight.style.width = '70%';
@@ -219,7 +227,7 @@ function elements(imgSrc) {
     image.src = imgSrc;
     image.style.width = '100%';
     image.style.height = 'auto';
-    image.style.borderRadius = '8px';
+    image.style.borderRadius = '.5em';
     image.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
 
     elements.style.width = 'calc(30% - 1em)';
