@@ -341,11 +341,6 @@ solutionsGrid.style.width = '100%';
 
 titlesContent.solutionsContent.forEach(solution => {
     let solutionCard = document.createElement('div');
-    // solutionCard.style.width = 'calc(30% - 1em)';
-    // solutionCard.style.backgroundColor = '#f1f1f1';
-    // solutionCard.style.padding = '1em';
-    // solutionCard.style.borderRadius = '.5em';
-    // solutionCard.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
     solutionCard.style.padding = paddings;
     solutionCard.style.display = 'flex';
     solutionCard.style.flexDirection = 'column';
