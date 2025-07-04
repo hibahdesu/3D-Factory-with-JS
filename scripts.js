@@ -74,6 +74,7 @@ nav.innerHTML = `
 `;
 
 document.body.insertBefore(nav, document.body.firstChild);
+document.body.style.backgroundColor = '#1d1d1d';
 
 let headerStyles = '"Dancing Script", cursive';
 let headerSize = '4rem';
@@ -89,38 +90,39 @@ let titlesContent = {
     catalog: 'Our Catalog',
     catalogContent: 'Our Work Speaks for Itself. Our past projects include collaborations with global chefs, themed installations, and luxury event showcases',
     images: [
-    './public/hero.jpg',
-    './public/Can.jpg',
-    './public/can2.jpg',
-    './public/juice.jpg',
-    './public/milk.jpg',
+    './public/photo3.png',
+    './public/photo4.png',
+    './public/photo5.png',
+    './public/photo6.png',
+    './public/photo7.png',
+    './public/photo8.png',
 ],
     solutions: 'Our Solutions',
 solutionsContent: [
     {
         title: 'Interactive 3D Tables',
         images: [
-            './public/photo1.png',
-            './public/photo2.png',
-            './public/photo3.png',
+            './public/photo13.png',
+            './public/photo11.png',
+            './public/photo12.png',
         ],
         description: 'Bring your tables to life with interactive visuals that respond to gestures and movement.'
     },
     {
         title: 'Immersive Wall Projections',
         images: [
-            './public/photo4.png',
-            './public/photo5.png',
-            './public/photo6.png',
+            './public/photo10.png',
+            './public/photo14.png',
+            './public/photo15.png',
         ],
         description: 'Transform your restaurant’s ambiance with wall-to-wall 3D projections tailored to themes and events.'
     },
     {
         title: 'Virtual Menu Experiences',
         images: [
-            './public/photo7.png',
-            './public/photo8.png',
-            './public/photo9.png',
+            './public/photo16.png',
+            './public/photo17.png',
+            './public/photo18.png',
         ],
         description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
     }
@@ -268,7 +270,7 @@ function elements(imgSrc) {
     container.appendChild(elements);
 }
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < titlesContent.images.length; i++) {
     elements(titlesContent.images[i]);
 }
 
@@ -282,7 +284,7 @@ solutionsSection.style.padding = paddings;
 solutionsSection.style.display = 'flex';
 solutionsSection.style.flexDirection = 'column';
 solutionsSection.style.alignItems = 'center';
-solutionsSection.style.gap = '2em';
+solutionsSection.style.gap = '1em';
 
 // Header
 let solutionsHeader = document.createElement('h3');
@@ -290,6 +292,7 @@ solutionsHeader.textContent = titlesContent.solutions;
 solutionsHeader.style.fontSize = headerSize;
 solutionsHeader.style.fontFamily = headerStyles;
 solutionsHeader.style.textAlign = 'center';
+solutionsHeader.style.margin = '0';
 solutionsSection.appendChild(solutionsHeader);
 
 // Solutions content
@@ -302,20 +305,24 @@ solutionsGrid.style.width = '100%';
 
 titlesContent.solutionsContent.forEach(solution => {
     let solutionCard = document.createElement('div');
-    solutionCard.style.width = 'calc(30% - 1em)';
+    // solutionCard.style.width = 'calc(30% - 1em)';
     // solutionCard.style.backgroundColor = '#f1f1f1';
-    solutionCard.style.padding = '1em';
-    solutionCard.style.borderRadius = '.5em';
-    solutionCard.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+    // solutionCard.style.padding = '1em';
+    // solutionCard.style.borderRadius = '.5em';
+    // solutionCard.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+    solutionCard.style.padding = paddings;
     solutionCard.style.display = 'flex';
     solutionCard.style.flexDirection = 'column';
-    solutionCard.style.gap = '.5em';
+    solutionCard.style.gap = '1.5em';
+    solutionCard.style.justifyContent = 'center';
+    solutionCard.style.alignItems = 'center';
 
     let title = document.createElement('h4');
     title.textContent = solution.title;
     title.style.fontFamily = headerStyles;
     title.style.margin = '0';
     title.style.color = '#333';
+    title.style.fontSize = '2rem';
 
     let desc = document.createElement('p');
     desc.textContent = solution.description;
@@ -323,8 +330,22 @@ titlesContent.solutionsContent.forEach(solution => {
     desc.style.color = '#666';
     desc.style.margin = '0';
 
+    let imagesContainer = document.createElement('div');
+    imagesContainer.style.display = 'flex';
+    imagesContainer.style.flexWrap = 'wrap';
+    imagesContainer.style.gap = '1em';
+    solution.images.forEach(imageSrc => {
+        let imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imgElement.style.width = 'calc(30% - 1em)';
+        imgElement.style.height = 'auto';
+        imgElement.style.borderRadius = '.5em';
+        imagesContainer.appendChild(imgElement);
+    });
+    
     solutionCard.appendChild(title);
     solutionCard.appendChild(desc);
+    solutionCard.appendChild(imagesContainer);
     solutionsGrid.appendChild(solutionCard);
 });
 
