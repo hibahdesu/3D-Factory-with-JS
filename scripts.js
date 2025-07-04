@@ -87,6 +87,13 @@ let titlesContent = {
     aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting.',
     catalog: 'Our Catalog',
     catalogContent: 'Our Work Speaks for Itself. Our past projects include collaborations with global chefs, themed installations, and luxury event showcases',
+    images: [
+    './public/hero.jpg',
+    './public/Can.jpg',
+    './public/can2.jpg',
+    './public/juice.jpg',
+    './public/milk.jpg',
+]
 };
 
 // HERO SECTION
@@ -208,15 +215,7 @@ container.style.display = 'flex';
 container.style.flexWrap = 'wrap';
 container.style.justifyContent = 'center';
 container.style.gap = '1em';
-// container.style.padding = '2em';
 
-let images = [
-    './public/hero.jpg',
-    './public/Can.jpg',
-    './public/can2.jpg',
-    './public/juice.jpg',
-    './public/milk.jpg',
-];
 
 function elements(imgSrc) {
     if (!imgSrc) return;
@@ -238,7 +237,7 @@ function elements(imgSrc) {
 }
 
 for (let i = 0; i < 4; i++) {
-    elements(images[i]);
+    elements(titlesContent.images[i]);
 }
 
 
