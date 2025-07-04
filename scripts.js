@@ -99,14 +99,29 @@ let titlesContent = {
 solutionsContent: [
     {
         title: 'Interactive 3D Tables',
+        images: [
+            './public/photo1.png',
+            './public/photo2.png',
+            './public/photo3.png',
+        ],
         description: 'Bring your tables to life with interactive visuals that respond to gestures and movement.'
     },
     {
         title: 'Immersive Wall Projections',
+        images: [
+            './public/photo4.png',
+            './public/photo5.png',
+            './public/photo6.png',
+        ],
         description: 'Transform your restaurant’s ambiance with wall-to-wall 3D projections tailored to themes and events.'
     },
     {
         title: 'Virtual Menu Experiences',
+        images: [
+            './public/photo7.png',
+            './public/photo8.png',
+            './public/photo9.png',
+        ],
         description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
     }
 ]
@@ -256,6 +271,65 @@ function elements(imgSrc) {
 for (let i = 0; i < 4; i++) {
     elements(titlesContent.images[i]);
 }
+
+
+
+
+let solutionsSection = document.createElement('div');
+solutionsSection.id = 'solutions';
+solutionsSection.style.margin = margin;
+solutionsSection.style.padding = paddings;
+solutionsSection.style.display = 'flex';
+solutionsSection.style.flexDirection = 'column';
+solutionsSection.style.alignItems = 'center';
+solutionsSection.style.gap = '2em';
+
+// Header
+let solutionsHeader = document.createElement('h3');
+solutionsHeader.textContent = titlesContent.solutions;
+solutionsHeader.style.fontSize = headerSize;
+solutionsHeader.style.fontFamily = headerStyles;
+solutionsHeader.style.textAlign = 'center';
+solutionsSection.appendChild(solutionsHeader);
+
+// Solutions content
+let solutionsGrid = document.createElement('div');
+solutionsGrid.style.display = 'flex';
+solutionsGrid.style.flexWrap = 'wrap';
+solutionsGrid.style.justifyContent = 'center';
+solutionsGrid.style.gap = '1em';
+solutionsGrid.style.width = '100%';
+
+titlesContent.solutionsContent.forEach(solution => {
+    let solutionCard = document.createElement('div');
+    solutionCard.style.width = 'calc(30% - 1em)';
+    // solutionCard.style.backgroundColor = '#f1f1f1';
+    solutionCard.style.padding = '1em';
+    solutionCard.style.borderRadius = '.5em';
+    solutionCard.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+    solutionCard.style.display = 'flex';
+    solutionCard.style.flexDirection = 'column';
+    solutionCard.style.gap = '.5em';
+
+    let title = document.createElement('h4');
+    title.textContent = solution.title;
+    title.style.fontFamily = headerStyles;
+    title.style.margin = '0';
+    title.style.color = '#333';
+
+    let desc = document.createElement('p');
+    desc.textContent = solution.description;
+    desc.style.fontSize = contentSize;
+    desc.style.color = '#666';
+    desc.style.margin = '0';
+
+    solutionCard.appendChild(title);
+    solutionCard.appendChild(desc);
+    solutionsGrid.appendChild(solutionCard);
+});
+
+solutionsSection.appendChild(solutionsGrid);
+document.body.appendChild(solutionsSection);
 
 
 let contactSection = document.createElement('div');
