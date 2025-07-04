@@ -14,31 +14,24 @@ nav.innerHTML = `
             margin: 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 1em;
+            gap: 2em;
             justify-content: center;
         }
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #F4EFE6;
+            font-size: 1.2rem;
         }
         nav ul li a:hover {
             text-decoration: underline;
         }
         nav {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+            padding: 2em;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif; 
             margin: 0;
             padding: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
         }
         footer {
             text-align: center;
@@ -81,9 +74,9 @@ let contentSize = '1.2rem';
 let lineHeights = '1.8';
 let margin = '2em 0';
 let paddings = '1em 2em';
-let titlesColor = '#f5f5f5';
-let contentColor = '#bbbbbb';
-let descColor = '#e0e0e0';
+let titlesColor = ' #F4EFE6';
+let contentColor = ' #B77B44';
+let descColor = ' #D8C3A5';
 let titleFontWeight = '800';
 
 let titlesContent = {
@@ -240,7 +233,7 @@ catalogDiv.style.padding = paddings;
 
 let catalogLeft = document.createElement('div');
 catalogLeft.id = 'catalogLeft';
-catalogLeft.style.background = 'red';
+catalogLeft.style.background = ' #B77B44';
 catalogLeft.style.width = '20%';
 catalogLeft.style.padding = '1em 1.5em';
 catalogLeft.style.borderRadius = '.5em'
@@ -349,7 +342,7 @@ titlesContent.solutionsContent.forEach(solution => {
     title.style.margin = '0';
     title.style.color = '#333';
     title.style.fontSize = '2rem';
-    title.style.color = titlesColor;
+    title.style.color = contentColor;
     title.style.fontWeight = titleFontWeight;
 
     let desc = document.createElement('p');
