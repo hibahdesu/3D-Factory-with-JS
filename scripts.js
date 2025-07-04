@@ -456,4 +456,5 @@ document.body.appendChild(contactSection);
 // FOOTER
 let footer = document.createElement('footer');
 footer.innerHTML = '&copy; 2025 Your 3D Restaurant. All rights reserved.';
+footer.style.color = titlesColor;
 document.body.appendChild(footer);
