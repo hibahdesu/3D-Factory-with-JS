@@ -4,6 +4,7 @@ nav.innerHTML = `
         <li><a href="#index">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#solutions">Solutions</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
     <style>
