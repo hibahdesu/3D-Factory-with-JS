@@ -84,7 +84,8 @@ let titlesContent = {
     about: 'About Us',
     aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting.',
     catalog: 'Our Catalog',
-    catalogContent: 'Our Work Speaks for Itself. Our past projects include collaborations with global chefs, themed installations, and luxury event showcases',
+    catalogContent: 'Our Work Speaks for Itself.',
+    catalogContent2: 'Explore our stunning 3D visuals and interactive designs that redefine the dining experience.',
     images: [
     './public/photo3.png',
     './public/photo4.png',
@@ -236,18 +237,34 @@ catalogLeft.id = 'catalogLeft';
 catalogLeft.style.background = ' #B77B44';
 catalogLeft.style.width = '20%';
 catalogLeft.style.padding = '1em 1.5em';
-catalogLeft.style.borderRadius = '.5em'
-
-let catalogLeftTxt = document.createElement('p');
-catalogLeftTxt.textContent = titlesContent.catalogContent;
+catalogLeft.style.borderRadius = '.5em';
 catalogLeft.style.display = 'flex';
+catalogLeft.style.flexDirection = 'column';
+catalogLeft.style.gap = '1em';
+catalogLeft.style.margin = '0';
 catalogLeft.style.justifyContent = 'center';
 catalogLeft.style.alignItems = 'center';
+catalogLeft.style.textAlign = 'center';
+
+let catalogLeftTxt = document.createElement('h3');
+catalogLeftTxt.textContent = titlesContent.catalogContent;
 catalogLeftTxt.style.fontFamily = headerStyles;
 catalogLeftTxt.style.fontSize = '2rem';
 catalogLeftTxt.style.color = 'white';
+catalogLeftTxt.style.margin = '0';
+catalogLeftTxt.style.color = titlesColor;
+catalogLeftTxt.style.fontWeight = titleFontWeight;
+catalogLeftTxt.style.lineHeight = lineHeights;
+
+let catalogLeftTxt2 = document.createElement('p');
+catalogLeftTxt2.textContent = titlesContent.catalogContent2;
+catalogLeftTxt2.style.fontSize = contentSize;
+catalogLeftTxt2.style.color = titlesColor;
+catalogLeftTxt2.style.lineHeight = lineHeights;
+
 
 catalogLeft.appendChild(catalogLeftTxt);
+catalogLeft.appendChild(catalogLeftTxt2);
 let catalogRight = document.createElement('div');
 catalogRight.id = 'catalogRight';
 catalogRight.style.width = '70%';
