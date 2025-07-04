@@ -43,7 +43,6 @@ nav.innerHTML = `
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #f8f9fa;
             border-top: 1px solid #ddd;
         }
 
@@ -82,6 +81,10 @@ let contentSize = '1.2rem';
 let lineHeights = '1.8';
 let margin = '2em 0';
 let paddings = '1em 2em';
+let titlesColor = '#f5f5f5';
+let contentColor = '#bbbbbb';
+let descColor = '#e0e0e0';
+let titleFontWeight = '800';
 
 let titlesContent = {
     hero: 'Step Into the Future of Dining',
@@ -137,7 +140,7 @@ function titlesStyles(tagName, content) {
     element.style.fontFamily = headerStyles;
     element.style.fontSize = headerSize;
     element.style.margin = '0';
-    element.style.color = '#fff';
+    element.style.color = titlesColor;
     return element;
 }
 
@@ -160,7 +163,8 @@ heroTxt.style.fontSize = headerSize;
 heroTxt.style.width = '35%';
 heroTxt.style.textAlign = 'center';
 heroTxt.style.lineHeight = '1.4';
-heroTxt.style.fontWeight = '800';
+heroTxt.style.fontWeight = titleFontWeight;
+heroTxt.style.color = titlesColor;
 
 let heroRight = document.createElement('div');
 heroRight.id = 'heroImage';
@@ -201,6 +205,7 @@ aboutContents.style.width = '50%';
 aboutContents.style.lineHeight = lineHeights;
 aboutContents.style.textAlign = 'center';
 aboutContents.style.fontSize = contentSize;
+aboutContents.style.color = contentColor;
 
 aboutSection.appendChild(aboutHeader);
 aboutSection.appendChild(aboutContents);
@@ -344,12 +349,15 @@ titlesContent.solutionsContent.forEach(solution => {
     title.style.margin = '0';
     title.style.color = '#333';
     title.style.fontSize = '2rem';
+    title.style.color = titlesColor;
+    title.style.fontWeight = titleFontWeight;
 
     let desc = document.createElement('p');
     desc.textContent = solution.description;
     desc.style.fontSize = contentSize;
     desc.style.color = '#666';
     desc.style.margin = '0';
+    desc.style.color = descColor;
 
     let imagesContainer = document.createElement('div');
     imagesContainer.style.display = 'flex';
