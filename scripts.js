@@ -126,9 +126,20 @@ solutionsContent: [
         ],
         description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
     }
-]
+], 
+    contact: 'Contact Us',
 
 };
+
+function titlesStyles(tagName, content) {
+    let element = document.createElement(tagName);
+    element.textContent = content;
+    element.style.fontFamily = headerStyles;
+    element.style.fontSize = headerSize;
+    element.style.margin = '0';
+    element.style.color = '#fff';
+    return element;
+}
 
 // HERO SECTION
 let heroSection = document.createElement('div');
@@ -175,11 +186,14 @@ aboutSection.style.justifyContent = 'center';
 aboutSection.style.alignItems = 'center';
 aboutSection.style.margin = margin;
 
-let aboutHeader = document.createElement('h3');
-aboutHeader.textContent = titlesContent.about;
-aboutHeader.style.fontFamily = headerStyles;
-aboutHeader.style.fontSize = headerSize;
-aboutHeader.style.margin = '0';
+// let aboutHeader = document.createElement('h3');
+// aboutHeader.textContent = titlesContent.about;
+// aboutHeader.style.fontFamily = headerStyles;
+// aboutHeader.style.fontSize = headerSize;
+// aboutHeader.style.margin = '0';
+
+let aboutHeader = titlesStyles('h3', titlesContent.about);
+
 
 let aboutContents = document.createElement('p');
 aboutContents.textContent = titlesContent.aboutContent;
@@ -200,12 +214,16 @@ catalogSection.style.display = 'flex';
 catalogSection.style.flexDirection = 'column';
 catalogSection.style.justifyContent = 'center';
 catalogSection.style.alignItems = 'center';
+catalogSection.style.gap = '1em';
 catalogSection.style.padding = paddings;
 
-let catalogHeader = document.createElement('h3');
-catalogHeader.textContent = titlesContent.catalog;
-catalogHeader.style.fontSize = headerSize;
-catalogHeader.style.fontFamily = headerStyles;
+// let catalogHeader = document.createElement('h3');
+// catalogHeader.textContent = titlesContent.catalog;
+// catalogHeader.style.fontSize = headerSize;
+// catalogHeader.style.fontFamily = headerStyles;
+
+let catalogHeader = titlesStyles('h3', titlesContent.catalog);
+
 
 let catalogDiv = document.createElement('div');
 catalogDiv.style.display = 'flex';
@@ -213,6 +231,7 @@ catalogDiv.style.flexWrap = 'wrap';
 catalogDiv.style.justifyContent = 'center';
 catalogDiv.style.alignItems = 'stretch';
 catalogDiv.style.width = '100%';
+catalogDiv.style.padding = paddings;
 
 let catalogLeft = document.createElement('div');
 catalogLeft.id = 'catalogLeft';
@@ -287,12 +306,14 @@ solutionsSection.style.alignItems = 'center';
 solutionsSection.style.gap = '1em';
 
 // Header
-let solutionsHeader = document.createElement('h3');
-solutionsHeader.textContent = titlesContent.solutions;
-solutionsHeader.style.fontSize = headerSize;
-solutionsHeader.style.fontFamily = headerStyles;
-solutionsHeader.style.textAlign = 'center';
-solutionsHeader.style.margin = '0';
+// let solutionsHeader = document.createElement('h3');
+// solutionsHeader.textContent = titlesContent.solutions;
+// solutionsHeader.style.fontSize = headerSize;
+// solutionsHeader.style.fontFamily = headerStyles;
+// solutionsHeader.style.textAlign = 'center';
+
+let solutionsHeader = titlesStyles('h3', titlesContent.solutions);
+
 solutionsSection.appendChild(solutionsHeader);
 
 // Solutions content
@@ -362,10 +383,13 @@ contactSection.style.flexDirection = 'column';
 contactSection.style.alignItems = 'center';
 contactSection.style.gap = '1em';
 
-let contactHeader = document.createElement('h3');
-contactHeader.textContent = 'Contact Us';
-contactHeader.style.fontSize = headerSize;
-contactHeader.style.fontFamily = headerStyles;
+// let contactHeader = document.createElement('h3');
+// contactHeader.textContent = 'Contact Us';
+// contactHeader.style.fontSize = headerSize;
+// contactHeader.style.fontFamily = headerStyles;
+
+let contactHeader = titlesStyles('h3', titlesContent.contact);
+
 
 let contactForm = document.createElement('form');
 contactForm.style.display = 'flex';
