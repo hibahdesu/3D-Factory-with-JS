@@ -94,7 +94,23 @@ let titlesContent = {
     './public/can2.jpg',
     './public/juice.jpg',
     './public/milk.jpg',
+],
+    solutions: 'Our Solutions',
+solutionsContent: [
+    {
+        title: 'Interactive 3D Tables',
+        description: 'Bring your tables to life with interactive visuals that respond to gestures and movement.'
+    },
+    {
+        title: 'Immersive Wall Projections',
+        description: 'Transform your restaurant’s ambiance with wall-to-wall 3D projections tailored to themes and events.'
+    },
+    {
+        title: 'Virtual Menu Experiences',
+        description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
+    }
 ]
+
 };
 
 // HERO SECTION
