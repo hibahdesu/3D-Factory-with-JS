@@ -410,6 +410,14 @@ contactSection.style.gap = '1em';
 
 let contactHeader = titlesStyles('h3', titlesContent.contact);
 
+let contactDiv = document.createElement('div');
+contactDiv.style.display = 'flex';
+contactDiv.style.justifyContent = 'center';
+contactDiv.style.alignItems = 'center';
+contactDiv.style.gap = '6em';
+
+let contactImage = document.createElement('img');
+contactImage.src = './public/photo8.png';
 
 let contactForm = document.createElement('form');
 contactForm.style.display = 'flex';
@@ -529,12 +537,14 @@ submitBtn.style.cursor = 'pointer';
 personDetails.appendChild(nameDiv);
 personDetails.appendChild(emailDiv);
 contactForm.appendChild(personDetails);
+contactDiv.appendChild(contactImage);
+contactDiv.appendChild(contactForm);
 contactForm.appendChild(messageDiv);
 contactForm.appendChild(submitBtn);
 
 // Add header and form to section
 contactSection.appendChild(contactHeader);
-contactSection.appendChild(contactForm);
+contactSection.appendChild(contactDiv);
 
 // Add contact section to body
 document.body.appendChild(contactSection);
