@@ -156,7 +156,13 @@ let titlesContent = {
     nameContent: 'Name:',
     emailContent: 'Email:',
     messageContent: 'Message:',
-    footertitle: '&copy; 2025 ArchVista 3D. All rights reserved.',
+    footerDetails: {
+        copyright: '&copy; 2025 ArchVista 3D. All rights reserved.',
+        builtBy: 'Built and designed by <strong>Hibah Sindi</strong>',
+        email: 'Email: contact@archvista3d.com',
+        phone: 'Phone: +1 (555) 123-4567',
+        location: 'Location: 1234 Innovation Blvd, NY, USA'
+    }
 };
 
 
@@ -552,17 +558,42 @@ document.body.appendChild(contactSection);
 
 
 // FOOTER
+// FOOTER
 let footer = document.createElement('footer');
-let footerDiv = document.createElement('div');
-footerDiv.style.display = 'flex';
-let footerLeft = document.createElement('p');
-footerLeft.innerHTML = titlesContent.footertitle;
-
 footer.style.color = titlesColor;
 footer.style.padding = paddings;
 footer.style.margin = margin;
 footer.style.textAlign = 'center';
+footer.style.fontSize = contentSize;
+footer.style.display = 'flex';
+footer.style.flexDirection = 'column';
+footer.style.gap = '0.5em';
+footer.style.alignItems = 'center';
 
-footerDiv.appendChild(footerLeft)
-footer.appendChild(footerDiv);
+// Footer Main Title
+let footerMain = document.createElement('p');
+footerMain.innerHTML = titlesContent.footertitle;
+
+// Contact Info
+let footerEmail = document.createElement('p');
+footerEmail.textContent = 'Email: contact@archvista3d.com';
+
+let footerPhone = document.createElement('p');
+footerPhone.textContent = 'Phone: +1 (555) 123-4567';
+
+let footerLocation = document.createElement('p');
+footerLocation.textContent = 'Location: 1234 Innovation Blvd, NY, USA';
+
+// Credit
+let footerCredit = document.createElement('p');
+footerCredit.innerHTML = 'Built and designed by <strong>Hibah Sindi</strong>';
+
+// Append all to footer
+footer.appendChild(footerMain);
+footer.appendChild(footerEmail);
+footer.appendChild(footerPhone);
+footer.appendChild(footerLocation);
+footer.appendChild(footerCredit);
+
+// Append footer to body
 document.body.appendChild(footer);
