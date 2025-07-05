@@ -106,59 +106,59 @@ let contentColor = ' #D8C3A5';
 let titleFontWeight = '800';
 
 let titlesContent = {
-    hero: 'Step Into the Future of Dining',
+    hero: 'Designing the Future in 3D',
     heroImage: './public/photo1.png',
     about: 'About Us',
-    aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting.',
-    catalog: 'Our Catalog',
-    catalogContent: 'Our Work Speaks for Itself.',
-    catalogContent2: 'Explore our stunning 3D visuals and interactive designs that redefine the dining experience.',
+    aboutContent: 'We are an architecture and visualization firm that brings building concepts to life through high-end 3D design. From concept to photorealistic renders, we turn your vision into immersive visual experiences.',
+    catalog: 'Our Projects',
+    catalogContent: 'Architecture in Every Pixel',
+    catalogContent2: 'Explore a collection of our residential, commercial, and public building designs brought to life with stunning 3D visuals.',
     images: [
-    './public/photo3.png',
-    './public/photo4.png',
-    './public/photo5.png',
-    './public/photo6.png',
-    './public/photo7.png',
-    './public/photo8.png',
-],
-    solutions: 'Our Solutions',
-solutionsContent: [
-    {
-        title: 'Interactive 3D Tables',
-        images: [
-            './public/photo11.png',
-            './public/photo18.png',
-            './public/photo12.png',
-        ],
-        description: 'Bring your tables to life with interactive visuals that respond to gestures and movement.'
-    },
-    {
-        title: 'Immersive Wall Projections',
-        images: [
-            './public/photo10.png',
-            './public/photo14.png',
-            './public/photo15.png',
-        ],
-        description: 'Transform your restaurant’s ambiance with wall-to-wall 3D projections tailored to themes and events.'
-    },
-    {
-        title: 'Virtual Menu Experiences',
-        images: [
-            './public/photo16.png',
-            './public/photo17.png',
-            './public/photo19.png',
-        ],
-        description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
-    }
-], 
+        './public/photo3.png',
+        './public/photo4.png',
+        './public/photo5.png',
+        './public/photo6.png',
+        './public/photo7.png',
+        './public/photo8.png',
+    ],
+    solutions: 'Our Services',
+    solutionsContent: [
+        {
+            title: 'Architectural Visualization',
+            images: [
+                './public/photo11.png',
+                './public/photo18.png',
+                './public/photo12.png',
+            ],
+            description: 'We create high-quality 3D models and renders of building exteriors and interiors to showcase your designs before construction.'
+        },
+        {
+            title: '3D Floor Plans & Layouts',
+            images: [
+                './public/photo10.png',
+                './public/photo14.png',
+                './public/photo15.png',
+            ],
+            description: 'Visualize space, proportions, and flow through interactive 3D floor plans tailored for clients and developers.'
+        },
+        {
+            title: 'Virtual Walkthroughs',
+            images: [
+                './public/photo16.png',
+                './public/photo17.png',
+                './public/photo19.png',
+            ],
+            description: 'Step into your future space with immersive virtual tours designed to showcase every detail and material choice.'
+        }
+    ],
     contact: 'Contact Us',
     contactImage: './public/contactImage.png',
     nameContent: 'Name:',
     emailContent: 'Email:',
     messageContent: 'Message:',
     footertitle: '&copy; 2025. All rights reserved.',
-
 };
+
 
 function titlesStyles(tagName, content) {
     let element = document.createElement(tagName);
