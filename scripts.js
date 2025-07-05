@@ -21,9 +21,12 @@ nav.innerHTML = `
             text-decoration: none;
             color: #F4EFE6;
             font-size: 1.2rem;
+            padding-bottom: .5em;
+            transition: color 0.3s ease, text-decoration 0.3s ease
         }
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #B77B44;
+            border-bottom: 2px solid #B77B44;
         }
         nav {
             padding: 2em;
