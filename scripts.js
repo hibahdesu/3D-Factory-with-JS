@@ -124,6 +124,9 @@ solutionsContent: [
     }
 ], 
     contact: 'Contact Us',
+    nameContent: 'Name:',
+    emailContent: 'Email:',
+    messageContent: 'Message:',
     footertitle: '&copy; 2025. All rights reserved.',
 
 };
@@ -184,12 +187,6 @@ aboutSection.style.justifyContent = 'center';
 aboutSection.style.alignItems = 'center';
 aboutSection.style.margin = margin;
 
-// let aboutHeader = document.createElement('h3');
-// aboutHeader.textContent = titlesContent.about;
-// aboutHeader.style.fontFamily = headerStyles;
-// aboutHeader.style.fontSize = headerSize;
-// aboutHeader.style.margin = '0';
-
 let aboutHeader = titlesStyles('h3', titlesContent.about);
 
 
@@ -215,10 +212,6 @@ catalogSection.style.alignItems = 'center';
 catalogSection.style.gap = '1em';
 catalogSection.style.padding = paddings;
 
-// let catalogHeader = document.createElement('h3');
-// catalogHeader.textContent = titlesContent.catalog;
-// catalogHeader.style.fontSize = headerSize;
-// catalogHeader.style.fontFamily = headerStyles;
 
 let catalogHeader = titlesStyles('h3', titlesContent.catalog);
 
@@ -308,8 +301,6 @@ for (let i = 0; i < titlesContent.images.length; i++) {
 }
 
 
-
-
 let solutionsSection = document.createElement('div');
 solutionsSection.id = 'solutions';
 solutionsSection.style.margin = margin;
@@ -319,12 +310,6 @@ solutionsSection.style.flexDirection = 'column';
 solutionsSection.style.alignItems = 'center';
 solutionsSection.style.gap = '1em';
 
-// Header
-// let solutionsHeader = document.createElement('h3');
-// solutionsHeader.textContent = titlesContent.solutions;
-// solutionsHeader.style.fontSize = headerSize;
-// solutionsHeader.style.fontFamily = headerStyles;
-// solutionsHeader.style.textAlign = 'center';
 
 let solutionsHeader = titlesStyles('h3', titlesContent.solutions);
 
@@ -395,11 +380,6 @@ contactSection.style.flexDirection = 'column';
 contactSection.style.alignItems = 'center';
 contactSection.style.gap = '1em';
 
-// let contactHeader = document.createElement('h3');
-// contactHeader.textContent = 'Contact Us';
-// contactHeader.style.fontSize = headerSize;
-// contactHeader.style.fontFamily = headerStyles;
-
 let contactHeader = titlesStyles('h3', titlesContent.contact);
 
 
@@ -410,23 +390,101 @@ contactForm.style.gap = '1em';
 contactForm.style.width = '100%';
 contactForm.style.maxWidth = '500px';
 
+
+let personDetails = document.createElement('div');
+personDetails.style.display = 'flex';
+personDetails.style.gap = '3em';
+
 // Name
+let nameDiv = document.createElement('div');
+nameDiv.style.display = 'flex';
+nameDiv.style.flexDirection = 'column';
+nameDiv.style.width = '100%';
+nameDiv.style.gap = '1em';
+
+let nameLabel = document.createElement('label');
+nameLabel.innerHTML = titlesContent.nameContent;
+nameLabel.style.color = contentColor;
+nameLabel.style.fontSize = contentSize;
+nameLabel.style.fontFamily = headerStyles;
+
+
 let nameInput = document.createElement('input');
 nameInput.type = 'text';
-nameInput.placeholder = 'Your Name';
+// nameInput.placeholder = titlesContent.nameContent;
 nameInput.required = true;
+nameInput.style.width = '100%';
+nameInput.style.background = 'transparent';
+nameInput.style.border = 'none';
+nameInput.style.borderBottom = `2px solid ${contentColor}`;
+nameInput.style.padding = '1em';
+nameInput.style.color = descColor;
+
+nameDiv.appendChild(nameLabel);
+nameDiv.appendChild(nameInput);
+
+
 
 // Email
+let emailDiv = document.createElement('div');
+emailDiv.style.display = 'flex';
+emailDiv.style.flexDirection = 'column';
+emailDiv.style.width = '100%';
+emailDiv.style.gap = '1em';
+
+let emailLabel = document.createElement('label');
+emailLabel.innerHTML = titlesContent.emailContent;
+emailLabel.style.color = contentColor;
+emailLabel.style.fontSize = contentSize;
+emailLabel.style.fontFamily = headerStyles;
+
 let emailInput = document.createElement('input');
 emailInput.type = 'email';
-emailInput.placeholder = 'Your Email';
+// emailInput.placeholder = titlesContent.emailContent;
 emailInput.required = true;
+emailInput.style.width = '100%';
+emailInput.style.background = 'transparent';
+emailInput.style.border = 'none';
+emailInput.style.borderBottom = `2px solid ${contentColor}`;
+emailInput.style.padding = '1em';
+emailInput.style.color = descColor;
+
+
+emailDiv.appendChild(emailLabel);
+emailDiv.appendChild(emailInput);
+
+
+
+
 
 // Message
+let messageDiv = document.createElement('div');
+messageDiv.style.display = 'flex';
+messageDiv.style.flexDirection = 'column';
+messageDiv.style.width = '100%';
+messageDiv.style.gap = '1em';
+
+let messageLabel = document.createElement('label');
+messageLabel.innerHTML = titlesContent.messageContent;
+messageLabel.style.color = contentColor;
+messageLabel.style.fontSize = contentSize;
+messageLabel.style.fontFamily = headerStyles;
+
+messageDiv.appendChild(messageLabel);
+
+
 let messageInput = document.createElement('textarea');
-messageInput.placeholder = 'Your Message';
 messageInput.rows = 5;
 messageInput.required = true;
+
+messageInput.style.width = '100%';
+messageInput.style.background = 'transparent';
+messageInput.style.border = 'none';
+messageInput.style.borderBottom = `2px solid ${contentColor}`;
+messageInput.style.padding = '1em';
+messageInput.style.color = descColor;
+
+messageDiv.appendChild(messageInput);
 
 // Submit button
 let submitBtn = document.createElement('button');
@@ -434,14 +492,17 @@ submitBtn.type = 'submit';
 submitBtn.textContent = 'Send Message';
 submitBtn.style.padding = '0.8em';
 submitBtn.style.backgroundColor = '#333';
-submitBtn.style.color = '#fff';
+submitBtn.style.color = contentColor;
+submitBtn.style.fontFamily = headerStyles;
+submitBtn.style.fontSize = contentSize;
 submitBtn.style.border = 'none';
 submitBtn.style.cursor = 'pointer';
 
 // Append elements to form
-contactForm.appendChild(nameInput);
-contactForm.appendChild(emailInput);
-contactForm.appendChild(messageInput);
+personDetails.appendChild(nameDiv);
+personDetails.appendChild(emailDiv);
+contactForm.appendChild(personDetails);
+contactForm.appendChild(messageDiv);
 contactForm.appendChild(submitBtn);
 
 // Add header and form to section
