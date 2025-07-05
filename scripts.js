@@ -156,7 +156,7 @@ let titlesContent = {
     nameContent: 'Name:',
     emailContent: 'Email:',
     messageContent: 'Message:',
-    footertitle: '&copy; 2025. All rights reserved.',
+    footertitle: '&copy; 2025 ArchVista 3D. All rights reserved.',
 };
 
 
