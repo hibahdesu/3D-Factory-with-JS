@@ -152,6 +152,7 @@ solutionsContent: [
     }
 ], 
     contact: 'Contact Us',
+    contactImage: './public/contactImage.png',
     nameContent: 'Name:',
     emailContent: 'Email:',
     messageContent: 'Message:',
@@ -417,7 +418,7 @@ contactDiv.style.alignItems = 'center';
 contactDiv.style.gap = '6em';
 
 let contactImage = document.createElement('img');
-contactImage.src = './public/photo8.png';
+contactImage.src = titlesContent.contactImage;
 
 let contactForm = document.createElement('form');
 contactForm.style.display = 'flex';
