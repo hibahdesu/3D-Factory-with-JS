@@ -76,7 +76,7 @@ let titleFontWeight = '800';
 
 let titlesContent = {
     hero: 'Step Into the Future of Dining',
-    heroImage: './public/photo13.png',
+    heroImage: './public/photo1.png',
     about: 'About Us',
     aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting.',
     catalog: 'Our Catalog',
