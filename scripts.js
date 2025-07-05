@@ -25,8 +25,8 @@ nav.innerHTML = `
             transition: color 0.3s ease, text-decoration 0.3s ease
         }
         nav ul li a:hover {
-            color: #B77B44;
-            border-bottom: 2px solid #B77B44;
+            color: #D8C3A5;
+            border-bottom: 2px solid #D8C3A5;
         }
         nav {
             padding: 2em;
@@ -73,8 +73,8 @@ let lineHeights = '1.8';
 let margin = '2em 0';
 let paddings = '1em 2em';
 let titlesColor = ' #F4EFE6';
-let contentColor = ' #B77B44';
-let descColor = ' #D8C3A5';
+let descColor = ' #B77B44';
+let contentColor = ' #D8C3A5';
 let titleFontWeight = '800';
 
 let titlesContent = {
@@ -199,8 +199,7 @@ aboutContents.style.width = '50%';
 aboutContents.style.lineHeight = lineHeights;
 aboutContents.style.textAlign = 'center';
 aboutContents.style.fontSize = contentSize;
-aboutContents.style.color = contentColor;
-
+aboutContents.style.color = descColor;
 aboutSection.appendChild(aboutHeader);
 aboutSection.appendChild(aboutContents);
 document.body.appendChild(aboutSection);
