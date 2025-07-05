@@ -33,11 +33,6 @@ nav.innerHTML = `
             margin: 0;
             padding: 0;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #ddd;
-        }
 
         /* Responsive styles */
         @media (max-width: 768px) {
@@ -81,6 +76,7 @@ let titleFontWeight = '800';
 
 let titlesContent = {
     hero: 'Step Into the Future of Dining',
+    heroImage: './public/photo13.png',
     about: 'About Us',
     aboutContent: 'A 3D restaurant is not just a place to eat, it’s a fully immersive environment where walls, tables, and even plates come to life using 3D projection mapping and interactive lighting.',
     catalog: 'Our Catalog',
@@ -99,8 +95,8 @@ solutionsContent: [
     {
         title: 'Interactive 3D Tables',
         images: [
-            './public/photo13.png',
             './public/photo11.png',
+            './public/photo18.png',
             './public/photo12.png',
         ],
         description: 'Bring your tables to life with interactive visuals that respond to gestures and movement.'
@@ -119,12 +115,13 @@ solutionsContent: [
         images: [
             './public/photo16.png',
             './public/photo17.png',
-            './public/photo18.png',
+            './public/photo19.png',
         ],
         description: 'Allow guests to explore menus in 3D, view dishes in augmented reality, and make interactive orders.'
     }
 ], 
     contact: 'Contact Us',
+    footertitle: '&copy; 2025. All rights reserved.',
 
 };
 
@@ -164,7 +161,7 @@ let heroRight = document.createElement('div');
 heroRight.id = 'heroImage';
 heroRight.style.width = '55%';
 heroRight.style.height = '100%';
-heroRight.style.backgroundImage = `url('./public/heroSection.png')`;
+heroRight.style.backgroundImage = `url(${titlesContent.heroImage})`;
 heroRight.style.backgroundSize = 'contain';
 heroRight.style.backgroundRepeat = 'no-repeat';
 heroRight.style.backgroundPosition = 'center';
@@ -352,7 +349,7 @@ titlesContent.solutionsContent.forEach(solution => {
     title.textContent = solution.title;
     title.style.fontFamily = headerStyles;
     title.style.margin = '0';
-    title.style.color = '#333';
+    title.style.color = contentColor;
     title.style.fontSize = '2rem';
     title.style.color = contentColor;
     title.style.fontWeight = titleFontWeight;
@@ -360,7 +357,7 @@ titlesContent.solutionsContent.forEach(solution => {
     let desc = document.createElement('p');
     desc.textContent = solution.description;
     desc.style.fontSize = contentSize;
-    desc.style.color = '#666';
+    desc.style.color = descColor;
     desc.style.margin = '0';
     desc.style.color = descColor;
 
@@ -455,6 +452,16 @@ document.body.appendChild(contactSection);
 
 // FOOTER
 let footer = document.createElement('footer');
-footer.innerHTML = '&copy; 2025 Your 3D Restaurant. All rights reserved.';
+let footerDiv = document.createElement('div');
+footerDiv.style.display = 'flex';
+let footerLeft = document.createElement('p');
+footerLeft.innerHTML = titlesContent.footertitle;
+
 footer.style.color = titlesColor;
+footer.style.padding = paddings;
+footer.style.margin = margin;
+footer.style.textAlign = 'center';
+
+footerDiv.appendChild(footerLeft)
+footer.appendChild(footerDiv);
 document.body.appendChild(footer);
