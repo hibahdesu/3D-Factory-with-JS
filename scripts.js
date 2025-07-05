@@ -1,67 +1,95 @@
 let nav = document.createElement('nav');
-nav.innerHTML = ` 
-    <ul>
-        <li><a href="#index">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#catalog">Catalog</a></li>
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <style>
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-            justify-content: center;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #F4EFE6;
-            font-size: 1.2rem;
-            padding-bottom: .5em;
-            transition: color 0.3s ease, text-decoration 0.3s ease
-        }
-        nav ul li a:hover {
-            color: #D8C3A5;
-            border-bottom: 2px solid #D8C3A5;
-        }
-        nav {
-            padding: 2em;
-        }
-        body {
-            font-family: 'Open Sans', sans-serif; 
-            margin: 0;
-            padding: 0;
-        }
+const styleTag = document.createElement('style');
+styleTag.textContent = `
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: center;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #F4EFE6;
+        font-size: 1.2rem;
+        padding-bottom: .5em;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+    nav ul li a:hover {
+        color: #D8C3A5;
+        border-bottom: 2px solid #D8C3A5;
+    }
+    nav {
+        padding: 2em;
+    }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            .container > div {
-                width: 100% !important;
-            }
-            #heroText {
-                width: 90% !important;
-            }
-            #heroImage {
-                width: 100% !important;
-                height: 300px !important;
-            }
-            #catalogLeft {
-                width: 100% !important;
-                margin-bottom: 1em;
-            }
-            #catalogRight {
-                width: 100% !important;
-            }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-bottom: 2px solid #D8C3A5; /* Softer highlight color */
+        background-color: rgba(255, 255, 255, 0.05); /* Subtle glow effect */
+        color: #F4EFE6;
+        transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    input,
+    textarea {
+        transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .custom-submit-button {
+        transition: background-color 0.3s ease, color 0.3s ease, border 0.2s ease;
+        border: 2px solid #D8C3A5;
+        background-color: #D8C3A5;
+        color: #B77B44;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+
+    .custom-submit-button:hover {
+        background-color: transparent;
+        border: 2px solid #D8C3A5;
+        color: #D8C3A5;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
         }
-    </style>
+        .container > div {
+            width: 100% !important;
+        }
+        #heroText {
+            width: 90% !important;
+        }
+        #heroImage {
+            width: 100% !important;
+            height: 300px !important;
+        }
+        #catalogLeft {
+            width: 100% !important;
+            margin-bottom: 1em;
+        }
+        #catalogRight {
+            width: 100% !important;
+        }
+    }
 `;
+document.head.appendChild(styleTag);
+
+nav.innerHTML = `
+  <ul>
+    <li><a href="#index">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#catalog">Catalog</a></li>
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+`;
+
+
 
 document.body.insertBefore(nav, document.body.firstChild);
 document.body.style.backgroundColor = '#1d1d1d';
@@ -488,15 +516,14 @@ messageDiv.appendChild(messageInput);
 
 // Submit button
 let submitBtn = document.createElement('button');
+submitBtn.classList.add('custom-submit-button');
 submitBtn.type = 'submit';
 submitBtn.textContent = 'Send Message';
-submitBtn.style.padding = '0.8em';
-submitBtn.style.backgroundColor = '#333';
-submitBtn.style.color = contentColor;
+submitBtn.style.padding = paddings;
+
 submitBtn.style.fontFamily = headerStyles;
-submitBtn.style.fontSize = contentSize;
-submitBtn.style.border = 'none';
 submitBtn.style.cursor = 'pointer';
+
 
 // Append elements to form
 personDetails.appendChild(nameDiv);
