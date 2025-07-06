@@ -565,12 +565,11 @@ footer.style.color = titlesColor;
 footer.style.padding = paddings;
 footer.style.margin = margin;
 footer.style.textAlign = 'center';
-footer.style.fontSize = contentSize;
+footer.style.fontSize = '1rem';
 footer.style.display = 'flex';
 footer.style.flexDirection = 'column';
 footer.style.gap = '0.5em';
-// footer.style.alignItems = 'center';
-// footer.style.justifyContent = 'center';
+
 
 let footerCopy = document.createElement('div');
 footerCopy.style.display = 'flex';
@@ -599,20 +598,21 @@ footerLocation.textContent = titlesContent.footerDetails.location;
 
 let footerContactTwo = document.createElement('div');
 
-
+let footerLine = document.createElement('hr');
+footerLine.style.color = contentColor;
+footerLine.style.width = '100%';
 
 let footerBuiltBy = document.createElement('p');
 footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
 
 // Append all to footer
-
-footer.appendChild(footerEmail);
-footer.appendChild(footerPhone);
-footer.appendChild(footerLocation);
-
+footerContactOne.appendChild(footerEmail);
+footerContactOne.appendChild(footerPhone);
+footerContactOne.appendChild(footerLocation);
 footerContact.appendChild(footerContactOne);
 footerContact.appendChild(footerContactTwo);
 footer.appendChild(footerContact);
+footer.appendChild(footerLine);
 footerCopy.appendChild(footerCopyright);
 footerCopy.appendChild(footerBuiltBy);
 footer.appendChild(footerCopy);
