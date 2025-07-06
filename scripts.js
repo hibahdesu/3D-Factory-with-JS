@@ -610,7 +610,9 @@ footer.appendChild(footerEmail);
 footer.appendChild(footerPhone);
 footer.appendChild(footerLocation);
 
-
+footerContact.appendChild(footerContactOne);
+footerContact.appendChild(footerContactTwo);
+footer.appendChild(footerContact);
 footerCopy.appendChild(footerCopyright);
 footerCopy.appendChild(footerBuiltBy);
 footer.appendChild(footerCopy);
