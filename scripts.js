@@ -581,6 +581,13 @@ footerCopy.style.alignItems = 'center';
 let footerCopyright = document.createElement('p');
 footerCopyright.innerHTML = titlesContent.footerDetails.copyright;
 
+let footerContact = document.createElement('div');
+footerContact.style.display = 'flex';
+footerContact.style.justifyContent = 'space-between';
+footerContact.style.alignItems = 'center';
+
+let footerContactOne = document.createElement('div');
+
 let footerEmail = document.createElement('p');
 footerEmail.textContent = titlesContent.footerDetails.email;
 
@@ -589,6 +596,10 @@ footerPhone.textContent = titlesContent.footerDetails.phone;
 
 let footerLocation = document.createElement('p');
 footerLocation.textContent = titlesContent.footerDetails.location;
+
+let footerContactTwo = document.createElement('div');
+
+
 
 let footerBuiltBy = document.createElement('p');
 footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
