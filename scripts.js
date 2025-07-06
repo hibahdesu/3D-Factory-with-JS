@@ -599,8 +599,11 @@ footer.appendChild(footerEmail);
 footer.appendChild(footerPhone);
 footer.appendChild(footerLocation);
 
-footer.appendChild(footerCopyright);
-footer.appendChild(footerBuiltBy);
+
+footerCopy.appendChild(footerCopyright);
+footerCopy.appendChild(footerBuiltBy);
+footer.appendChild(footerCopy);
+
 
 // Append footer to body
 document.body.appendChild(footer);
