@@ -1,3 +1,17 @@
+document.body.style.backgroundColor = '#1d1d1d';
+
+let headerStyles = '"Dancing Script", cursive';
+let headerSize = '4rem';
+let contentSize = '1.2rem';
+let lineHeights = '1.8';
+let margin = '2em 0';
+let paddings = '1em 2em';
+let titlesColor = ' #F4EFE6';
+let descColor = ' #B77B44';
+let contentColor = ' #D8C3A5';
+let titleFontWeight = '800';
+
+// Create navigation bar
 let nav = document.createElement('nav');
 const styleTag = document.createElement('style');
 styleTag.textContent = `
@@ -12,25 +26,24 @@ styleTag.textContent = `
     }
     nav ul li a {
         text-decoration: none;
-        color: #F4EFE6;
+        color: ${titlesColor};
         font-size: 1.2rem;
         padding-bottom: .5em;
         transition: color 0.3s ease, text-decoration 0.3s ease;
     }
     nav ul li a:hover {
-        color: #D8C3A5;
-        border-bottom: 2px solid #D8C3A5;
+        color: ${contentColor};
+        border-bottom: 2px solid ${contentColor};
     }
     nav {
         padding: 2em;
     }
-
     input:focus,
     textarea:focus {
         outline: none;
-        border-bottom: 2px solid #D8C3A5; /* Softer highlight color */
-        background-color: rgba(255, 255, 255, 0.05); /* Subtle glow effect */
-        color: #F4EFE6;
+        border-bottom: 2px solid ${contentColor}; 
+        background-color: rgba(255, 255, 255, 0.05); 
+        color: ${titlesColor};
         transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
 
@@ -41,17 +54,17 @@ styleTag.textContent = `
 
     .custom-submit-button {
         transition: background-color 0.3s ease, color 0.3s ease, border 0.2s ease;
-        border: 2px solid #D8C3A5;
-        background-color: #D8C3A5;
-        color: #B77B44;
+        border: 2px solid ${contentColor};
+        background-color: ${contentColor};
+        color: ${descColor};
         font-weight: bold;
         font-size: 1.6rem;
     }
 
     .custom-submit-button:hover {
         background-color: transparent;
-        border: 2px solid #D8C3A5;
-        color: #D8C3A5;
+        border: 2px solid ${contentColor};
+        color: ${contentColor};
     }
 
     @media (max-width: 768px) {
@@ -92,18 +105,7 @@ nav.innerHTML = `
 
 
 document.body.insertBefore(nav, document.body.firstChild);
-document.body.style.backgroundColor = '#1d1d1d';
 
-let headerStyles = '"Dancing Script", cursive';
-let headerSize = '4rem';
-let contentSize = '1.2rem';
-let lineHeights = '1.8';
-let margin = '2em 0';
-let paddings = '1em 2em';
-let titlesColor = ' #F4EFE6';
-let descColor = ' #B77B44';
-let contentColor = ' #D8C3A5';
-let titleFontWeight = '800';
 
 let titlesContent = {
     hero: 'Designing the Future in 3D',
@@ -558,7 +560,6 @@ document.body.appendChild(contactSection);
 
 
 // FOOTER
-// FOOTER
 let footer = document.createElement('footer');
 footer.style.color = titlesColor;
 footer.style.padding = paddings;
@@ -568,32 +569,32 @@ footer.style.fontSize = contentSize;
 footer.style.display = 'flex';
 footer.style.flexDirection = 'column';
 footer.style.gap = '0.5em';
-footer.style.alignItems = 'center';
+// footer.style.alignItems = 'center';
+// footer.style.justifyContent = 'center';
 
-// Footer Main Title
-let footerMain = document.createElement('p');
-footerMain.innerHTML = titlesContent.footertitle;
+// Create footer elements using content from object
+let footerCopyright = document.createElement('p');
+footerCopyright.innerHTML = titlesContent.footerDetails.copyright;
 
-// Contact Info
 let footerEmail = document.createElement('p');
-footerEmail.textContent = 'Email: contact@archvista3d.com';
+footerEmail.textContent = titlesContent.footerDetails.email;
 
 let footerPhone = document.createElement('p');
-footerPhone.textContent = 'Phone: +1 (555) 123-4567';
+footerPhone.textContent = titlesContent.footerDetails.phone;
 
 let footerLocation = document.createElement('p');
-footerLocation.textContent = 'Location: 1234 Innovation Blvd, NY, USA';
+footerLocation.textContent = titlesContent.footerDetails.location;
 
-// Credit
-let footerCredit = document.createElement('p');
-footerCredit.innerHTML = 'Built and designed by <strong>Hibah Sindi</strong>';
+let footerBuiltBy = document.createElement('p');
+footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
 
 // Append all to footer
-footer.appendChild(footerMain);
+footer.appendChild(footerCopyright);
 footer.appendChild(footerEmail);
 footer.appendChild(footerPhone);
 footer.appendChild(footerLocation);
-footer.appendChild(footerCredit);
+footer.appendChild(footerBuiltBy);
 
 // Append footer to body
 document.body.appendChild(footer);
+
