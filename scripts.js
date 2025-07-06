@@ -572,6 +572,11 @@ footer.style.gap = '0.5em';
 // footer.style.alignItems = 'center';
 // footer.style.justifyContent = 'center';
 
+let footerCopy = document.createElement('div');
+footerCopy.style.display = 'flex';
+footerCopy.style.justifyContent = 'space-between';
+footerCopy.style.alignItems = 'center';
+
 // Create footer elements using content from object
 let footerCopyright = document.createElement('p');
 footerCopyright.innerHTML = titlesContent.footerDetails.copyright;
@@ -589,10 +594,12 @@ let footerBuiltBy = document.createElement('p');
 footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
 
 // Append all to footer
-footer.appendChild(footerCopyright);
+
 footer.appendChild(footerEmail);
 footer.appendChild(footerPhone);
 footer.appendChild(footerLocation);
+
+footer.appendChild(footerCopyright);
 footer.appendChild(footerBuiltBy);
 
 // Append footer to body
