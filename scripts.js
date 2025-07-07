@@ -100,6 +100,7 @@ nav.innerHTML = `
     <li><a href="#index">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#catalog">Catalog</a></li>
+    <li><a href="#process">Process</a></li>
     <li><a href="#solutions">Solutions</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -371,6 +372,7 @@ solutionsSection.style.flexDirection = 'column';
 solutionsSection.style.alignItems = 'center';
 solutionsSection.style.gap = '1em';
 
+
 // PROCESS SECTION
 let processSection = document.createElement('div');
 processSection.id = 'process';
@@ -386,6 +388,8 @@ processSection.appendChild(processHeader);
 
 // Container for process steps
 let processTimeline = document.createElement('div');
+processTimeline.style.margin = margin;
+processTimeline.style.padding = paddings;
 processTimeline.style.display = 'flex';
 processTimeline.style.flexWrap = 'wrap';
 processTimeline.style.justifyContent = 'center';
@@ -397,11 +401,19 @@ titlesContent.processSection.steps.forEach(step => {
     let stepContainer = document.createElement('div');
     stepContainer.style.display = 'flex';
     stepContainer.style.flexDirection = 'column';
-    stepContainer.style.gap = '1.4em';
+    stepContainer.style.gap = '1em';
     stepContainer.style.width = 'calc(50% - 1em)';
     stepContainer.style.padding = paddings;
     stepContainer.style.borderLeft = `4px solid ${descColor}`;
     stepContainer.style.boxSizing = 'border-box';
+
+    // Glassmorphism Styles
+    stepContainer.style.background = 'rgba(255, 255, 255, 0.05)';
+    stepContainer.style.backdropFilter = 'blur(10px)';
+    stepContainer.style.webkitBackdropFilter = 'blur(10px)';
+    stepContainer.style.borderRadius = '1em';
+    stepContainer.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    stepContainer.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
 
     let stepTitle = document.createElement('h4');
     stepTitle.textContent = step.title;
