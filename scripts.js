@@ -188,8 +188,13 @@ let titlesContent = {
         builtBy: 'Built and designed by <strong>Hibah Sindi</strong>',
         email: 'Email: contact@archvista3d.com',
         phone: 'Phone: +1 (555) 123-4567',
-        location: 'Location: 1234 Innovation Blvd, NY, USA'
-    }
+        location: 'Location: 1234 Innovation Blvd, NY, USA',
+        socialLinks: [
+            { icon: '🔗', name: 'LinkedIn', url: 'https://www.linkedin.com/' },
+            { icon: '📸', name: 'Instagram', url: 'https://www.instagram.com/' },
+            { icon: '🐦', name: 'Twitter', url: 'https://www.twitter.com/' },
+        ]
+            }
 };
 
 
@@ -363,14 +368,7 @@ for (let i = 0; i < titlesContent.images.length; i++) {
 }
 
 
-let solutionsSection = document.createElement('div');
-solutionsSection.id = 'solutions';
-solutionsSection.style.margin = margin;
-solutionsSection.style.padding = paddings;
-solutionsSection.style.display = 'flex';
-solutionsSection.style.flexDirection = 'column';
-solutionsSection.style.alignItems = 'center';
-solutionsSection.style.gap = '1em';
+
 
 
 // PROCESS SECTION
@@ -440,6 +438,15 @@ document.body.appendChild(processSection);
 
 
 // Solutions Section
+let solutionsSection = document.createElement('div');
+solutionsSection.id = 'solutions';
+solutionsSection.style.margin = margin;
+solutionsSection.style.padding = paddings;
+solutionsSection.style.display = 'flex';
+solutionsSection.style.flexDirection = 'column';
+solutionsSection.style.alignItems = 'center';
+solutionsSection.style.gap = '1em';
+
 let solutionsHeader = titlesStyles('h3', titlesContent.solutions);
 
 solutionsSection.appendChild(solutionsHeader);
@@ -689,6 +696,27 @@ let footerLocation = document.createElement('p');
 footerLocation.textContent = titlesContent.footerDetails.location;
 
 let footerContactTwo = document.createElement('div');
+footerContactTwo.style.display = 'flex';
+footerContactTwo.style.flexDirection = 'column';
+footerContactTwo.style.gap = '1em';
+
+
+socialLinks.forEach(link => {
+    let a = document.createElement('a');
+    a.style.textDecoration = 'none';
+    a.href = link.url;
+    a.target = '_blank';
+    a.textContent = link.name;
+    a.title = link.name;
+    a.style.color = titlesColor;
+    a.style.transition = 'color 0.3s ease';
+
+    a.addEventListener('mouseenter', () => a.style.color = contentColor);
+    a.addEventListener('mouseleave', () => a.style.color = titlesColor);
+
+    footerContactTwo.appendChild(a);
+});
+
 
 let footerLine = document.createElement('hr');
 footerLine.style.color = contentColor;
