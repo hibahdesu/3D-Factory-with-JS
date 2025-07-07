@@ -368,6 +368,63 @@ solutionsSection.style.flexDirection = 'column';
 solutionsSection.style.alignItems = 'center';
 solutionsSection.style.gap = '1em';
 
+// PROCESS SECTION
+let processSection = document.createElement('div');
+processSection.id = 'process';
+processSection.style.margin = margin;
+processSection.style.padding = paddings;
+processSection.style.display = 'flex';
+processSection.style.flexDirection = 'column';
+processSection.style.alignItems = 'center';
+processSection.style.gap = '2em';
+
+let processHeader = titlesStyles('h3', titlesContent.processSection.title);
+processSection.appendChild(processHeader);
+
+// Container for process steps
+let processTimeline = document.createElement('div');
+processTimeline.style.display = 'flex';
+processTimeline.style.flexWrap = 'wrap'; // allow wrapping
+processTimeline.style.justifyContent = 'center';
+processTimeline.style.gap = '2em';
+processTimeline.style.width = '100%';
+processTimeline.style.maxWidth = '1000px';
+
+titlesContent.processSection.steps.forEach(step => {
+    let stepContainer = document.createElement('div');
+    stepContainer.style.display = 'flex';
+    stepContainer.style.flexDirection = 'column';
+    stepContainer.style.gap = '1.4em';
+    stepContainer.style.width = 'calc(50% - 1em)';
+    // stepContainer.style.backgroundColor = '#2a2a2a';
+    stepContainer.style.padding = paddings;
+    stepContainer.style.borderLeft = `4px solid ${descColor}`;
+    // stepContainer.style.borderRadius = '.5em';
+    stepContainer.style.boxSizing = 'border-box';
+
+    let stepTitle = document.createElement('h4');
+    stepTitle.textContent = step.title;
+    stepTitle.style.fontFamily = headerStyles;
+    stepTitle.style.fontSize = '1.6rem';
+    stepTitle.style.color = contentColor;
+    stepTitle.style.margin = '0';
+
+    let stepDesc = document.createElement('p');
+    stepDesc.textContent = step.description;
+    stepDesc.style.fontSize = contentSize;
+    stepDesc.style.lineHeight = lineHeights;
+    stepDesc.style.color = descColor;
+    stepDesc.style.margin = '0';
+
+    stepContainer.appendChild(stepTitle);
+    stepContainer.appendChild(stepDesc);
+    processTimeline.appendChild(stepContainer);
+});
+
+processSection.appendChild(processTimeline);
+document.body.appendChild(processSection);
+
+
 
 let solutionsHeader = titlesStyles('h3', titlesContent.solutions);
 
