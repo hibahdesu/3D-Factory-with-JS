@@ -396,10 +396,8 @@ titlesContent.processSection.steps.forEach(step => {
     stepContainer.style.flexDirection = 'column';
     stepContainer.style.gap = '1.4em';
     stepContainer.style.width = 'calc(50% - 1em)';
-    // stepContainer.style.backgroundColor = '#2a2a2a';
     stepContainer.style.padding = paddings;
     stepContainer.style.borderLeft = `4px solid ${descColor}`;
-    // stepContainer.style.borderRadius = '.5em';
     stepContainer.style.boxSizing = 'border-box';
 
     let stepTitle = document.createElement('h4');
@@ -426,6 +424,7 @@ document.body.appendChild(processSection);
 
 
 
+// Solutions Section
 let solutionsHeader = titlesStyles('h3', titlesContent.solutions);
 
 solutionsSection.appendChild(solutionsHeader);
