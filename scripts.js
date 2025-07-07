@@ -98,8 +98,8 @@ styleTag.textContent = `
         text-align: center;
         }
 
-        #home h1, #home div {
-        width: 100% !important;
+        #home h1, #home div, #about p {
+            width: 100% !important;
         }
 
         .container > div {
