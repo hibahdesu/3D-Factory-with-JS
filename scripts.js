@@ -185,7 +185,8 @@ let titlesContent = {
     messageContent: 'Message:',
     footerDetails: {
         copyright: '&copy; 2025 ArchVista 3D. All rights reserved.',
-        builtBy: 'Built and designed by <strong>Hibah Sindi</strong>',
+        builtBy: 'Built and designed by ',
+        name: 'Hibah Sindi',
         email: 'Email: contact@archvista3d.com',
         phone: 'Phone: +1 (555) 123-4567',
         location: 'Location: 1234 Innovation Blvd, NY, USA',
@@ -701,7 +702,7 @@ footerContactTwo.style.flexDirection = 'column';
 footerContactTwo.style.gap = '1em';
 
 
-socialLinks.forEach(link => {
+titlesContent.footerDetails.socialLinks.forEach(link => {
     let a = document.createElement('a');
     a.style.textDecoration = 'none';
     a.href = link.url;
@@ -724,6 +725,13 @@ footerLine.style.width = '100%';
 
 let footerBuiltBy = document.createElement('p');
 footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
+let footerBuiltByName = document.createElement('span');
+footerBuiltByName.style.fontWeight = 'bold';
+footerBuiltByName.innerHTML = titlesContent.footerDetails.name;
+footerBuiltByName.style.color = descColor;
+footerBuiltByName.style.fontFamily = headerStyles;
+footerBuiltByName.style.fontSize = contentSize;
+footerBuiltBy.appendChild(footerBuiltByName);
 
 // Append all to footer
 footerContactOne.appendChild(footerEmail);
