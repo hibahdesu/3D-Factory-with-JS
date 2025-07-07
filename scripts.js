@@ -153,6 +153,27 @@ let titlesContent = {
             description: 'Step into your future space with immersive virtual tours designed to showcase every detail and material choice.'
         }
     ],
+    processSection: {
+    title: 'Our Process',
+    steps: [
+            {
+                title: 'Discovery & Brief',
+                description: 'We begin by understanding your goals, design intent, and vision. This includes gathering references, architectural plans, and project requirements.'
+            },
+            {
+                title: 'Concept Design',
+                description: 'We build a foundational 3D model and present early design directions, focusing on massing, layout, and spatial flow.'
+            },
+            {
+                title: 'Modeling & Feedback',
+                description: 'We refine the model, materials, lighting, and details based on your feedback to ensure accurate and compelling visual results.'
+            },
+            {
+                title: 'Final Delivery',
+                description: 'You receive high-resolution images, videos, or walkthroughs ready for presentation, marketing, or client delivery.'
+            }
+        ]
+    },
     contact: 'Contact Us',
     contactImage: './public/contactImage.png',
     nameContent: 'Name:',
