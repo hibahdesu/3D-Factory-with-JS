@@ -88,6 +88,9 @@ styleTag.textContent = `
         #catalogRight {
             width: 100% !important;
         }
+        #process div[style*="width: calc(50%"] {
+        width: 100% !important;
+        }
     }
 `;
 document.head.appendChild(styleTag);
@@ -384,7 +387,7 @@ processSection.appendChild(processHeader);
 // Container for process steps
 let processTimeline = document.createElement('div');
 processTimeline.style.display = 'flex';
-processTimeline.style.flexWrap = 'wrap'; // allow wrapping
+processTimeline.style.flexWrap = 'wrap';
 processTimeline.style.justifyContent = 'center';
 processTimeline.style.gap = '2em';
 processTimeline.style.width = '100%';
