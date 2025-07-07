@@ -88,9 +88,57 @@ styleTag.textContent = `
         #catalogRight {
             width: 100% !important;
         }
+
         #process div[style*="width: calc(50%"] {
         width: 100% !important;
         }
+
+        #home {
+        flex-direction: column !important;
+        text-align: center;
+        }
+
+        #home h1, #home div {
+        width: 100% !important;
+        }
+
+        .container > div {
+        width: 100% !important;
+        margin-bottom: 1em;
+        }
+
+        #solutions img {
+            width: 100% !important;
+        }
+        #process, #solutions {
+            text-align: center !important;
+        }
+        #contact > div {
+            flex-direction: column !important;
+            gap: 2em !important;
+            align-items: center !important;
+        }
+
+        #contact img {
+            width: 100% !important;
+            max-width: 400px;
+            height: auto;
+        }
+
+        #contact form {
+            width: 90% !important;
+        }
+        footer > div {
+        flex-direction: column !important;
+        gap: 1em;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    footer hr {
+        width: 90% !important;
+    }
+
     }
 `;
 document.head.appendChild(styleTag);
@@ -191,9 +239,9 @@ let titlesContent = {
         phone: 'Phone: +1 (555) 123-4567',
         location: 'Location: 1234 Innovation Blvd, NY, USA',
         socialLinks: [
-            { icon: '🔗', name: 'LinkedIn', url: 'https://www.linkedin.com/' },
-            { icon: '📸', name: 'Instagram', url: 'https://www.instagram.com/' },
-            { icon: '🐦', name: 'Twitter', url: 'https://www.twitter.com/' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/' },
+            { name: 'Instagram', url: 'https://www.instagram.com/' },
+            { name: 'Twitter', url: 'https://www.twitter.com/' },
         ]
             }
 };
@@ -212,7 +260,6 @@ function titlesStyles(tagName, content) {
 // HERO SECTION
 let heroSection = document.createElement('div');
 heroSection.id = 'home';
-heroSection.style.height = '90vh';
 heroSection.style.display = 'flex';
 heroSection.style.alignItems = 'center';
 heroSection.style.justifyContent = 'center';
@@ -234,7 +281,7 @@ heroTxt.style.color = titlesColor;
 let heroRight = document.createElement('div');
 heroRight.id = 'heroImage';
 heroRight.style.width = '55%';
-heroRight.style.height = '100%';
+heroRight.style.height = '90vh';
 heroRight.style.backgroundImage = `url(${titlesContent.heroImage})`;
 heroRight.style.backgroundSize = 'contain';
 heroRight.style.backgroundRepeat = 'no-repeat';
@@ -748,4 +795,7 @@ footer.appendChild(footerCopy);
 
 // Append footer to body
 document.body.appendChild(footer);
+
+
+
 
