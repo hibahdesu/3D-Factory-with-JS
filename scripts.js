@@ -71,20 +71,25 @@ styleTag.textContent = `
         h1 {
             font-size: 2.5rem;
         }
+
         .container > div {
             width: 100% !important;
         }
+
         #heroText {
             width: 90% !important;
         }
+
         #heroImage {
             width: 100% !important;
             height: 300px !important;
         }
+
         #catalogLeft {
             width: 100% !important;
             margin-bottom: 1em;
         }
+
         #catalogRight {
             width: 100% !important;
         }
@@ -103,16 +108,18 @@ styleTag.textContent = `
         }
 
         .container > div {
-        width: 100% !important;
-        margin-bottom: 1em;
+            width: 100% !important;
+            margin-bottom: 1em;
         }
 
         #solutions img {
             width: 100% !important;
         }
+
         #process, #solutions {
             text-align: center !important;
         }
+
         #contact > div {
             flex-direction: column !important;
             gap: 2em !important;
@@ -128,11 +135,12 @@ styleTag.textContent = `
         #contact form {
             width: 90% !important;
         }
+
         footer > div {
-        flex-direction: column !important;
-        gap: 1em;
-        align-items: center !important;
-        text-align: center;
+            flex-direction: column !important;
+            gap: 1em;
+            align-items: center !important;
+            text-align: center;
     }
 
     footer hr {
@@ -453,12 +461,11 @@ titlesContent.processSection.steps.forEach(step => {
     stepContainer.style.borderLeft = `4px solid ${descColor}`;
     stepContainer.style.boxSizing = 'border-box';
 
-    // Glassmorphism Styles
     stepContainer.style.background = 'rgba(255, 255, 255, 0.05)';
     stepContainer.style.backdropFilter = 'blur(10px)';
     stepContainer.style.webkitBackdropFilter = 'blur(10px)';
     stepContainer.style.borderRadius = '1em';
-    stepContainer.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+    stepContainer.style.border = `1px solid ${descColor}`;
     stepContainer.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
 
     let stepTitle = document.createElement('h4');
