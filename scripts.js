@@ -243,6 +243,7 @@ let titlesContent = {
         copyright: '&copy; 2025 ArchVista 3D. All rights reserved.',
         builtBy: 'Built and designed by ',
         name: 'Hibah Sindi',
+        linkedIn: 'https://www.linkedin.com/in/hibah-sindi/',
         email: 'Email: contact@archvista3d.com',
         phone: 'Phone: +1 (555) 123-4567',
         location: 'Location: 1234 Innovation Blvd, NY, USA',
