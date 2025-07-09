@@ -639,7 +639,6 @@ emailLabel.style.fontFamily = headerStyles;
 
 let emailInput = document.createElement('input');
 emailInput.type = 'email';
-// emailInput.placeholder = titlesContent.emailContent;
 emailInput.required = true;
 emailInput.style.width = '100%';
 emailInput.style.background = 'transparent';
@@ -779,7 +778,11 @@ footerLine.style.width = '100%';
 
 let footerBuiltBy = document.createElement('p');
 footerBuiltBy.innerHTML = titlesContent.footerDetails.builtBy;
-let footerBuiltByName = document.createElement('span');
+let footerBuiltByName = document.createElement('a');
+footerBuiltByName.href = '';
+footerBuiltByName.target = '_blank';
+footerBuiltByName.title = titlesContent.footerDetails.name;
+footerBuiltByName.style.textDecoration = 'none';
 footerBuiltByName.style.fontWeight = 'bold';
 footerBuiltByName.innerHTML = titlesContent.footerDetails.name;
 footerBuiltByName.style.color = descColor;
