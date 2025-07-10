@@ -15,6 +15,12 @@ let titleFontWeight = '800';
 let nav = document.createElement('nav');
 const styleTag = document.createElement('style');
 styleTag.textContent = `
+    #btn:hover {
+    background-color: transparent;
+    color: ${titlesColor}
+    border: 1px solid ${titlesColor}
+    }
+
     #hamburger {
             display: none;
     }
