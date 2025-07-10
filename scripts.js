@@ -355,7 +355,26 @@ btn.style.boxShadow = '0 2px 5px rgba(244, 239, 230, 0.2)';
 btn.style.display = 'none';
 
 
+onscroll = function() {
+    if (scrollY > 400) {
+        btn.style.display = 'block';
+    }
+    else {
+        btn.style.display = 'none';
+    }
+}
+btn.onclick = function() {
+    scrollTo({
+        left: 0,
+        top: 0, 
+        behavior: 'smooth'
+    });
+}
+
 document.body.appendChild(btn);
+
+
+
 
 function titlesStyles(tagName, content) {
     let element = document.createElement(tagName);
