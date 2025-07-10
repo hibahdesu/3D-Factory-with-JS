@@ -100,19 +100,16 @@ styleTag.textContent = `
         #navLinks {
             display: none;
             flex-direction: column;
-            width: 100%;
             background-color: transparent;
-            margin-top: 1em;
             border-radius: 0.5em;
             border: 1px solid ${titlesColor};
-            padding: .5em;
         }
 
         #navLinks ul {
             flex-direction: column;
             gap: 1em;
             align-items: center;
-            padding: 1em;
+            padding: 1.5em;
         }
 
         #navLinks ul li a {
