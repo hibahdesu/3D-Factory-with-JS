@@ -15,6 +15,9 @@ let titleFontWeight = '800';
 let nav = document.createElement('nav');
 const styleTag = document.createElement('style');
 styleTag.textContent = `
+    #hamburger {
+            display: none;
+    }
     nav ul {
         list-style-type: none;
         padding: 0;
@@ -38,6 +41,10 @@ styleTag.textContent = `
     nav {
         padding: 2em;
     }
+    #navLinks {
+    transition: all 0.3s ease-in-out;
+    }
+
     input:focus,
     textarea:focus {
         outline: none;
@@ -68,6 +75,51 @@ styleTag.textContent = `
     }
 
     @media (max-width: 768px) {
+        nav {
+            position: relative;
+            padding: 1em;
+        }
+
+        #hamburger {
+            display: block !important;
+            border: none;
+        }   
+
+        #hamburger:hover {
+            color: ${contentColor} !important;
+        }
+        #hamburger {
+            display: block;
+        }
+        #navLinks {
+            display: none;
+        }
+        #navLinks.show {
+            display: flex;
+        }
+        #navLinks {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #1d1d1d;
+            margin-top: 1em;
+        }
+
+        #navLinks ul {
+            flex-direction: column;
+            gap: 1em;
+            align-items: flex-start;
+            padding: 1em;
+        }
+
+        #navLinks ul li a {
+            font-size: 1.1rem;
+            padding: 0.5em 0;
+        }
+
+        #navLinks.show {
+            display: flex;
+        }
         h1 {
             font-size: 2.5rem;
         }
@@ -151,7 +203,9 @@ styleTag.textContent = `
 `;
 document.head.appendChild(styleTag);
 
-nav.innerHTML = `
+let navLinks = document.createElement('div');
+navLinks.id = 'navLinks';
+navLinks.innerHTML = `
   <ul>
     <li><a href="#index">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -161,10 +215,31 @@ nav.innerHTML = `
     <li><a href="#contact">Contact</a></li>
   </ul>
 `;
+nav.appendChild(navLinks);
+
+
+
+let hamburger = document.createElement('button');
+hamburger.id = 'hamburger';
+hamburger.innerHTML = '&#9776;';
+hamburger.setAttribute('aria-label', 'Toggle navigation');
+// hamburger.style.display = 'none'; 
+hamburger.style.fontSize = '2rem';
+hamburger.style.background = 'transparent';
+hamburger.style.color = titlesColor;
+hamburger.style.cursor = 'pointer';
+hamburger.style.position = 'absolute';
+hamburger.style.top = '1.5em';
+hamburger.style.right = '1.5em';
+nav.appendChild(hamburger);
 
 
 
 document.body.insertBefore(nav, document.body.firstChild);
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
 
 
 let titlesContent = {
