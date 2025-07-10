@@ -40,7 +40,6 @@ styleTag.textContent = `
         border: 1px solid ${titlesColor};
     }
 
-
     #hamburger {
             display: none;
     }
@@ -59,6 +58,8 @@ styleTag.textContent = `
         font-size: 1.2rem;
         padding-bottom: .5em;
         transition: color 0.3s ease, text-decoration 0.3s ease;
+        font-family: ${headerStyles};
+        font-weight: 800;
     }
     nav ul li a:hover {
         color: ${contentColor};
