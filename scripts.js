@@ -223,7 +223,6 @@ let hamburger = document.createElement('button');
 hamburger.id = 'hamburger';
 hamburger.innerHTML = '&#9776;';
 hamburger.setAttribute('aria-label', 'Toggle navigation');
-// hamburger.style.display = 'none'; 
 hamburger.style.fontSize = '2rem';
 hamburger.style.background = 'transparent';
 hamburger.style.color = titlesColor;
@@ -330,6 +329,44 @@ let titlesContent = {
             }
 };
 
+let btn = document.createElement('button');
+btn.id = 'mvBtn';
+btn.innerHTML = 'Up';
+btn.style.fontFamily = headerStyles;
+btn.style.fontWeight = 'bold';
+btn.style.fontSize = '1rem';
+btn.style.width = '40px';
+btn.style.height = '40px';
+btn.style.backgroundColor = titlesColor;
+btn.style.borderRadius = '50%';
+btn.style.cursor = 'pointer';
+btn.style.border = `1px solid ${descColor}`;
+btn.style.color = descColor;
+btn.style.position = 'fixed';
+btn.style.bottom = '20px';
+btn.style.right = '20px';
+btn.style.boxShadow = '0 2px 5px hsla(0, 0.00%, 92.50%, 0.70)';
+
+
+document.body.appendChild(btn);
+
+/*
+#btn {
+    width: 35px;
+    height: 35px;
+    background-color: #C5B8D4;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: .8em;
+    border: none;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 2px 5px rgba(236, 236, 236, 0.7);
+    display: none;
+}
+*/
 
 function titlesStyles(tagName, content) {
     let element = document.createElement(tagName);
