@@ -77,7 +77,7 @@ styleTag.textContent = `
     @media (max-width: 768px) {
         nav {
             position: relative;
-            padding: 1em;
+            padding: .5em !important;
         }
 
         #hamburger {
@@ -101,14 +101,17 @@ styleTag.textContent = `
             display: none;
             flex-direction: column;
             width: 100%;
-            background-color: #1d1d1d;
+            background-color: transparent;
             margin-top: 1em;
+            border-radius: 0.5em;
+            border: 1px solid ${titlesColor};
+            padding: .5em;
         }
 
         #navLinks ul {
             flex-direction: column;
             gap: 1em;
-            align-items: flex-start;
+            align-items: center;
             padding: 1em;
         }
 
@@ -229,8 +232,8 @@ hamburger.style.background = 'transparent';
 hamburger.style.color = titlesColor;
 hamburger.style.cursor = 'pointer';
 hamburger.style.position = 'absolute';
-hamburger.style.top = '1.5em';
-hamburger.style.right = '1.5em';
+hamburger.style.top = '.5em';
+hamburger.style.right = '.5em';
 nav.appendChild(hamburger);
 
 
