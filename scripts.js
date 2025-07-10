@@ -345,28 +345,11 @@ btn.style.color = descColor;
 btn.style.position = 'fixed';
 btn.style.bottom = '20px';
 btn.style.right = '20px';
-btn.style.boxShadow = '0 2px 5px hsla(0, 0.00%, 92.50%, 0.70)';
+btn.style.boxShadow = '0 2px 5px rgba(244, 239, 230, 0.2)';
+btn.style.display = 'none';
 
 
 document.body.appendChild(btn);
-
-/*
-#btn {
-    width: 35px;
-    height: 35px;
-    background-color: #C5B8D4;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: .8em;
-    border: none;
-    color: white;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 0 2px 5px rgba(236, 236, 236, 0.7);
-    display: none;
-}
-*/
 
 function titlesStyles(tagName, content) {
     let element = document.createElement(tagName);
