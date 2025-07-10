@@ -15,11 +15,31 @@ let titleFontWeight = '800';
 let nav = document.createElement('nav');
 const styleTag = document.createElement('style');
 styleTag.textContent = `
-    #btn:hover {
-    background-color: transparent;
-    color: ${titlesColor}
-    border: 1px solid ${titlesColor}
+    #mvBtn {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: ${titlesColor};
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid ${descColor};
+    color: ${descColor};
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 2px 5px rgba(244, 239, 230, 0.2);
+    display: none;
+    transition: all 0.3s ease;
     }
+
+    #mvBtn:hover {
+        background-color: ${descColor};
+        color: ${titlesColor};
+        border: 1px solid ${titlesColor};
+    }
+
 
     #hamburger {
             display: none;
@@ -338,21 +358,23 @@ let titlesContent = {
 let btn = document.createElement('button');
 btn.id = 'mvBtn';
 btn.innerHTML = 'Up';
-btn.style.fontFamily = headerStyles;
-btn.style.fontWeight = 'bold';
-btn.style.fontSize = '1rem';
-btn.style.width = '40px';
-btn.style.height = '40px';
-btn.style.backgroundColor = titlesColor;
-btn.style.borderRadius = '50%';
-btn.style.cursor = 'pointer';
-btn.style.border = `1px solid ${descColor}`;
-btn.style.color = descColor;
-btn.style.position = 'fixed';
-btn.style.bottom = '20px';
-btn.style.right = '20px';
-btn.style.boxShadow = '0 2px 5px rgba(244, 239, 230, 0.2)';
-btn.style.display = 'none';
+// btn.style.fontFamily = headerStyles;
+// btn.style.fontWeight = 'bold';
+// btn.style.fontSize = '1rem';
+// btn.style.width = '40px';
+// btn.style.height = '40px';
+// btn.style.backgroundColor = titlesColor;
+// btn.style.borderRadius = '50%';
+// btn.style.cursor = 'pointer';
+// btn.style.border = `1px solid ${descColor}`;
+// btn.style.color = descColor;
+// btn.style.position = 'fixed';
+// btn.style.bottom = '20px';
+// btn.style.right = '20px';
+// btn.style.boxShadow = '0 2px 5px rgba(244, 239, 230, 0.2)';
+// btn.style.display = 'none';
+// btn.style.zIndex = '1000';
+
 
 
 onscroll = function() {
@@ -372,7 +394,6 @@ btn.onclick = function() {
 }
 
 document.body.appendChild(btn);
-
 
 
 
