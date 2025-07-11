@@ -538,11 +538,11 @@ function elements(imgSrc) {
     image.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
     image.style.transition = 'transform 0.3s ease';
     image.addEventListener('mouseover', () => {
-        image.style.transform = 'scale(1.05)';
+        image.style.transform = 'scale(1.10)';
     });
-    
-    image.addEventListener('mouseover', () => {
-        image.style.transform = 'scale(1.05)';
+
+    image.addEventListener('mouseout', () => {
+        image.style.transform = 'scale(1)';
     });
 
     elements.style.width = 'calc(30% - 1em)';
