@@ -536,6 +536,14 @@ function elements(imgSrc) {
     image.style.height = 'auto';
     image.style.borderRadius = '.5em';
     image.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+    image.style.transition = 'transform 0.3s ease';
+    image.addEventListener('mouseover', () => {
+        image.style.transform = 'scale(1.05)';
+    });
+    
+    image.addEventListener('mouseover', () => {
+        image.style.transform = 'scale(1.05)';
+    });
 
     elements.style.width = 'calc(30% - 1em)';
     elements.style.textAlign = 'center';
