@@ -538,6 +538,7 @@ function elements(imgSrc) {
     image.style.objectFit = 'cover';
     image.style.maxWidth = '100%';
     image.style.transition = 'transform 0.3s ease';
+
     image.addEventListener('mouseover', () => {
         image.style.transform = 'scale(1.10)';
     });
@@ -556,9 +557,6 @@ function elements(imgSrc) {
 for (let i = 0; i < titlesContent.images.length; i++) {
     elements(titlesContent.images[i]);
 }
-
-
-
 
 
 // PROCESS SECTION
