@@ -16,7 +16,7 @@ let nav = document.createElement('nav');
 const styleTag = document.createElement('style');
 styleTag.textContent = `
     #mvBtn {
-    font-family: "Dancing Script", cursive;
+    font-family: ${headerStyles};
     font-weight: bold;
     font-size: 1rem;
     width: 40px;
@@ -359,24 +359,6 @@ let titlesContent = {
 let btn = document.createElement('button');
 btn.id = 'mvBtn';
 btn.innerHTML = 'Up';
-// btn.style.fontFamily = headerStyles;
-// btn.style.fontWeight = 'bold';
-// btn.style.fontSize = '1rem';
-// btn.style.width = '40px';
-// btn.style.height = '40px';
-// btn.style.backgroundColor = titlesColor;
-// btn.style.borderRadius = '50%';
-// btn.style.cursor = 'pointer';
-// btn.style.border = `1px solid ${descColor}`;
-// btn.style.color = descColor;
-// btn.style.position = 'fixed';
-// btn.style.bottom = '20px';
-// btn.style.right = '20px';
-// btn.style.boxShadow = '0 2px 5px rgba(244, 239, 230, 0.2)';
-// btn.style.display = 'none';
-// btn.style.zIndex = '1000';
-
-
 
 onscroll = function() {
     if (scrollY > 400) {
@@ -753,7 +735,6 @@ nameLabel.style.fontFamily = headerStyles;
 
 let nameInput = document.createElement('input');
 nameInput.type = 'text';
-// nameInput.placeholder = titlesContent.nameContent;
 nameInput.required = true;
 nameInput.style.width = '100%';
 nameInput.style.background = 'transparent';
