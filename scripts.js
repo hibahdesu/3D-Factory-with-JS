@@ -585,6 +585,15 @@ processTimeline.style.maxWidth = '1000px';
 
 titlesContent.processSection.steps.forEach(step => {
     let stepContainer = document.createElement('div');
+
+    stepContainer.addEventListener('mouseover', () => {
+        stepContainer.style.background = 'rgba(255, 255, 255, 0.1)';
+    });
+
+    stepContainer.addEventListener('mouseout', () => {
+        stepContainer.style.background = 'rgba(255, 255, 255, 0.05)';
+    });
+    
     stepContainer.style.display = 'flex';
     stepContainer.style.flexDirection = 'column';
     stepContainer.style.gap = '1em';
