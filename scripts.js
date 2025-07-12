@@ -23,8 +23,8 @@ styleTag.textContent = `
     height: 40px;
 
     background-color: ${descColor};
-        color: ${titlesColor};
-        border: 1px solid ${titlesColor};
+    color: ${titlesColor};
+    border: 1px solid ${titlesColor};
     border-radius: 50%;
     cursor: pointer;
     
