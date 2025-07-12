@@ -21,11 +21,14 @@ styleTag.textContent = `
     font-size: 1rem;
     width: 40px;
     height: 40px;
-    background-color: ${titlesColor};
+
+    background-color: ${descColor};
+        color: ${titlesColor};
+        border: 1px solid ${titlesColor};
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid ${descColor};
-    color: ${descColor};
+    
+    
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -35,9 +38,9 @@ styleTag.textContent = `
     }
 
     #mvBtn:hover {
-        background-color: ${descColor};
-        color: ${titlesColor};
-        border: 1px solid ${titlesColor};
+        background-color: ${titlesColor};
+        color: ${descColor};
+        border: 1px solid ${descColor};
     }
 
     #hamburger {
