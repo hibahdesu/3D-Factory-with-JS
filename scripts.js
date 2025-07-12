@@ -21,14 +21,11 @@ styleTag.textContent = `
     font-size: 1rem;
     width: 40px;
     height: 40px;
-
     background-color: ${descColor};
     color: ${titlesColor};
     border: 1px solid ${titlesColor};
     border-radius: 50%;
     cursor: pointer;
-    
-    
     position: fixed;
     bottom: 20px;
     right: 20px;
