@@ -41,8 +41,9 @@ styleTag.textContent = `
     }
 
     #hamburger {
-            display: none;
+        display: none;
     }
+
     nav ul {
         list-style-type: none;
         padding: 0;
@@ -68,8 +69,9 @@ styleTag.textContent = `
     nav {
         padding: 2em;
     }
+
     #navLinks {
-    transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
     input:focus,
@@ -174,12 +176,12 @@ styleTag.textContent = `
         }
 
         #process div[style*="width: calc(50%"] {
-        width: 100% !important;
+            width: 100% !important;
         }
 
         #home {
-        flex-direction: column !important;
-        text-align: center;
+            flex-direction: column !important;
+            text-align: center;
         }
 
         #home h1, #home div, #about p {
@@ -222,9 +224,9 @@ styleTag.textContent = `
             text-align: center;
     }
 
-    footer hr {
-        width: 90% !important;
-    }
+        footer hr {
+            width: 90% !important;
+        }
 
     }
 `;
