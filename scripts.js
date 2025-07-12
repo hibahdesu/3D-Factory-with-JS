@@ -32,6 +32,7 @@ styleTag.textContent = `
     box-shadow: 0 2px 5px rgba(244, 239, 230, 0.2);
     display: none;
     transition: all 0.3s ease;
+    z-index: 1000;
     }
 
     #mvBtn:hover {
